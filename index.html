@@ -129,54 +129,67 @@
                 <span class="text-xl font-bold text-black">Asked Questions</span>
             </h1>
 
-            <!-- acordiano -->
-            <section>
-                <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                    <input type="radio" name="my-accordion-3" checked="checked" />
-                    <div class="collapse-title font-semibold">1.The difference between var,let and const?
-                    </div>
-                    <div class="collapse-content text-sm">var is old and can change anywhere.let can change but only in
-                        its block.const never changes.
-                    </div>
-                    <input type="radio" name="my-accordion-3" checked="checked" />
-                    <div class="collapse-title font-semibold">2.what is the difference between map(), forEach(), and filter()
-                    </div>
-                    <div class="collapse-content text-sm">map() Applies a function to each array element and returns a new array.  
-                        forEach() Runs a function on each element but does not return a new array.  
-                        filter()Returns a new array with elements that meet a specific condition.
-                        
-                    </div>
-                </div>
-                <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                    <input type="radio" name="my-accordion-3" />
-                    <div class="collapse-title font-semibold">3.Explain arrow functions and how they are different from
-                        regular function?
+         <!-- Accordion Section -->
+<section>
+    <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" id="q1" />
+        <label for="q1" class="collapse-title font-semibold">
+            1. The difference between var, let, and const?
+        </label>
+        <div class="collapse-content text-sm">
+            <p><b>var</b> is function-scoped and can be re-declared and updated.</p>
+            <p><b>let</b> is block-scoped and can be updated but not re-declared.</p>
+            <p><b>const</b> is block-scoped and cannot be updated or re-declared.</p>
+        </div>
+    </div>
 
-                    </div>
-                    <div class="collapse-content text-sm">Arrow functions (=>) are a short way to write functions. They
-                        don’t change this, but regular functions do.
-                        Click on "Forgot Password" on the login page, enter your email, and follow the reset link to set
-                        a new password. </div>
-                </div>
-                <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                    <input type="radio" name="my-accordion-3" />
-                    <div class="collapse-title font-semibold">4.How JavaScript Promise work?
-                    </div>
-                    <div class="collapse-content text-sm">A JavaScript Promise handles async tasks. It starts in
-                        "pending" state, then becomes "resolved" (success) or "rejected" (error). You use .then() for
-                        success and .catch() for errors.
-                    </div>
+    <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" id="q2" />
+        <label for="q2" class="collapse-title font-semibold">
+            2. What is the difference between map(), forEach(), and filter()?
+        </label>
+        <div class="collapse-content text-sm">
+            <p><b>map()</b> applies a function to each array element and returns a new array.</p>
+            <p><b>forEach()</b> runs a function on each element but does not return a new array.</p>
+            <p><b>filter()</b> returns a new array with elements that meet a specific condition.</p>
+        </div>
+    </div>
 
-                </div>
-                <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                    <input type="radio" name="my-accordion-3" />
-                    <div class="collapse-title font-semibold">5.How closures work in JavaScript?
-                    </div>
-                    <div class="collapse-content text-sm">A closure in JavaScript means a function can use variables from its parent function even after the parent function is done running. It helps keep data private.
-                    </div>
+    <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" id="q3" />
+        <label for="q3" class="collapse-title font-semibold">
+            3. Explain arrow functions and how they are different from regular functions?
+        </label>
+        <div class="collapse-content text-sm">
+            <p>Arrow functions (`=>`) are a shorter way to write functions.</p>
+            <p>They do not have their own `this` context, whereas regular functions do.</p>
+        </div>
+    </div>
 
-                </div>
-            </section>
+    <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" id="q4" />
+        <label for="q4" class="collapse-title font-semibold">
+            4. How do JavaScript Promises work?
+        </label>
+        <div class="collapse-content text-sm">
+            <p>A JavaScript Promise handles async tasks.</p>
+            <p>It starts in the "pending" state, then changes to "resolved" (success) or "rejected" (error).</p>
+            <p>You use `.then()` for success and `.catch()` for errors.</p>
+        </div>
+    </div>
+
+    <div class="collapse collapse-plus bg-base-100 border border-base-300">
+        <input type="radio" name="my-accordion-3" id="q5" />
+        <label for="q5" class="collapse-title font-semibold">
+            5. How do closures work in JavaScript?
+        </label>
+        <div class="collapse-content text-sm">
+            <p>A closure in JavaScript allows a function to access variables from its parent scope even after the parent function has finished executing.</p>
+            <p>It is useful for data encapsulation and private variables.</p>
+        </div>
+    </div>
+</section>
+
 
         </section>
 
