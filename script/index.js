@@ -18,7 +18,7 @@ const navButton = document.getElementById("navbar");
 
 const loginButton = document.getElementById("login");
 loginButton.onclick = function () {
-    const name = document.getElementById('userName');
+    const name = document.getElementById('userName').value;
     const  password = passwordInput.value.trim();
     if (name ==='') {
         return alert('Please Enter Your Name ')
