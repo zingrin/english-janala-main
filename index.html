@@ -8,7 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         html {
             scroll-behavior: smooth;
@@ -31,18 +33,18 @@
             </div>
             <!-- Buttons -->
             <div class="text-white flex gap-2">
-                    <button id="faqSection"
-                        class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
-                        <img src="./assets/fa-circle-question.png" alt="FAQ Icon" class="w-5 h-5">
-                        FAQ
-                    </button>
-                
-                    <button id="vacabularies"
-                        class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
-                        <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
-                        Learn
-                    </button>
-           
+                <button id="faqSection"
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-circle-question.png" alt="FAQ Icon" class="w-5 h-5">
+                    FAQ
+                </button>
+
+                <button id="vacabularies"
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
+                    Learn
+                </button>
+
                 <button id="Logout"
                     class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
                     <img src="./assets/fa-arrow-right-from-bracket.png" alt="" class="w-5 h-5">
@@ -98,27 +100,41 @@
             <section id="levelContainer" class=" w-10/12 mx-auto flex gap-2 justify-around items-center">
 
             </section>
-            
-          <!-- loader-->
-          <div id="loader" class="hidden text-center w-full mx-auto relative top-20 z-40">
-            <span class="loading loading-ball text-orange-500 loading-xs"></span>
-            <span class="loading loading-ball text-red-600 loading-sm"></span>
-            <span class="loading loading-ball text-blue-900 loading-md"></span>
-            <span class="loading loading-ball text-yellow-900 loading-lg"></span>
-            <span class="loading loading-ball loading-xl"></span>
-        </div>
 
-           <!-- level words -->
-           <section class=" w-11/12 grid grid-cols-1 md:grid-cols-3 gap-2 bg-slate-100 mt-4 p-4 rounded-lg mx-auto"
-           id="wordCards">
-           <div class="text-center py-10 col-span-3 space-y-5">
-               <p class="text-gray-600  text-sm">আপনি এখনো কোন Lesson Select করেন নি</p>
-               <h1 class="font-bold text-xl">একটি Lesson Select করুন।</h1>
-           </div>
+            <!-- loader-->
+            <div id="loader" class="hidden text-center w-full mx-auto relative top-20 z-40">
+                <span class="loading loading-ball text-orange-500 loading-xs"></span>
+                <span class="loading loading-ball text-red-600 loading-sm"></span>
+                <span class="loading loading-ball text-blue-900 loading-md"></span>
+                <span class="loading loading-ball text-yellow-900 loading-lg"></span>
+                <span class="loading loading-ball loading-xl"></span>
+            </div>
 
-           <!--  show dynamic word card -->
-       </section>
+            <!-- level words -->
+            <section class=" w-11/12 grid grid-cols-1 md:grid-cols-3 gap-2 bg-slate-100 mt-4 p-4 rounded-lg mx-auto"
+                id="wordCards">
+                <div class="text-center py-10 col-span-3 space-y-5">
+                    <p class="text-gray-600  text-sm">আপনি এখনো কোন Lesson Select করেন নি</p>
+                    <h1 class="font-bold text-xl">একটি Lesson Select করুন।</h1>
+                </div>
 
+                <!--  show dynamic word card -->
+            </section>
+
+              <!-- modal -->
+              <dialog id="wordDetails" class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                    <div id="detailsContainer" class="p-4 shadow-md border space-y-2 rounded-md">
+                       <!-- dynamic details  -->
+                    </div>
+                    <div class="modal-action">
+                        <form method="dialog">
+                            <button class="btn justify-start btn-primary" autofocus >Complete Learning</button>
+                        </form>
+                    </div>
+
+                </div>
+            </dialog>
         </section>
 
 
@@ -129,66 +145,68 @@
                 <span class="text-xl font-bold text-black">Asked Questions</span>
             </h1>
 
-         <!-- Accordion Section -->
-<section>
-    <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" id="q1" />
-        <label for="q1" class="collapse-title font-semibold">
-            1. The difference between var, let, and const?
-        </label>
-        <div class="collapse-content text-sm">
-            <p><b>var</b> is function-scoped and can be re-declared and updated.</p>
-            <p><b>let</b> is block-scoped and can be updated but not re-declared.</p>
-            <p><b>const</b> is block-scoped and cannot be updated or re-declared.</p>
-        </div>
-    </div>
+            <!-- Accordion Section -->
+            <section>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" id="q1" />
+                    <label for="q1" class="collapse-title font-semibold">
+                        1. The difference between var, let, and const?
+                    </label>
+                    <div class="collapse-content text-sm">
+                        <p><b>var</b> is function-scoped and can be re-declared and updated.</p>
+                        <p><b>let</b> is block-scoped and can be updated but not re-declared.</p>
+                        <p><b>const</b> is block-scoped and cannot be updated or re-declared.</p>
+                    </div>
+                </div>
 
-    <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" id="q2" />
-        <label for="q2" class="collapse-title font-semibold">
-            2. What is the difference between map(), forEach(), and filter()?
-        </label>
-        <div class="collapse-content text-sm">
-            <p><b>map()</b> applies a function to each array element and returns a new array.</p>
-            <p><b>forEach()</b> runs a function on each element but does not return a new array.</p>
-            <p><b>filter()</b> returns a new array with elements that meet a specific condition.</p>
-        </div>
-    </div>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" id="q2" />
+                    <label for="q2" class="collapse-title font-semibold">
+                        2. What is the difference between map(), forEach(), and filter()?
+                    </label>
+                    <div class="collapse-content text-sm">
+                        <p><b>map()</b> applies a function to each array element and returns a new array.</p>
+                        <p><b>forEach()</b> runs a function on each element but does not return a new array.</p>
+                        <p><b>filter()</b> returns a new array with elements that meet a specific condition.</p>
+                    </div>
+                </div>
 
-    <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" id="q3" />
-        <label for="q3" class="collapse-title font-semibold">
-            3. Explain arrow functions and how they are different from regular functions?
-        </label>
-        <div class="collapse-content text-sm">
-            <p>Arrow functions (`=>`) are a shorter way to write functions.</p>
-            <p>They do not have their own `this` context, whereas regular functions do.</p>
-        </div>
-    </div>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" id="q3" />
+                    <label for="q3" class="collapse-title font-semibold">
+                        3. Explain arrow functions and how they are different from regular functions?
+                    </label>
+                    <div class="collapse-content text-sm">
+                        <p>Arrow functions (`=>`) are a shorter way to write functions.</p>
+                        <p>They do not have their own `this` context, whereas regular functions do.</p>
+                    </div>
+                </div>
 
-    <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" id="q4" />
-        <label for="q4" class="collapse-title font-semibold">
-            4. How do JavaScript Promises work?
-        </label>
-        <div class="collapse-content text-sm">
-            <p>A JavaScript Promise handles async tasks.</p>
-            <p>It starts in the "pending" state, then changes to "resolved" (success) or "rejected" (error).</p>
-            <p>You use `.then()` for success and `.catch()` for errors.</p>
-        </div>
-    </div>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" id="q4" />
+                    <label for="q4" class="collapse-title font-semibold">
+                        4. How do JavaScript Promises work?
+                    </label>
+                    <div class="collapse-content text-sm">
+                        <p>A JavaScript Promise handles async tasks.</p>
+                        <p>It starts in the "pending" state, then changes to "resolved" (success) or "rejected" (error).
+                        </p>
+                        <p>You use `.then()` for success and `.catch()` for errors.</p>
+                    </div>
+                </div>
 
-    <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" id="q5" />
-        <label for="q5" class="collapse-title font-semibold">
-            5. How do closures work in JavaScript?
-        </label>
-        <div class="collapse-content text-sm">
-            <p>A closure in JavaScript allows a function to access variables from its parent scope even after the parent function has finished executing.</p>
-            <p>It is useful for data encapsulation and private variables.</p>
-        </div>
-    </div>
-</section>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" id="q5" />
+                    <label for="q5" class="collapse-title font-semibold">
+                        5. How do closures work in JavaScript?
+                    </label>
+                    <div class="collapse-content text-sm">
+                        <p>A closure in JavaScript allows a function to access variables from its parent scope even
+                            after the parent function has finished executing.</p>
+                        <p>It is useful for data encapsulation and private variables.</p>
+                    </div>
+                </div>
+            </section>
 
 
         </section>
