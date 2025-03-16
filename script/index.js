@@ -18,8 +18,12 @@ const navButton = document.getElementById("navbar");
 
 const loginButton = document.getElementById("login");
 loginButton.onclick = function () {
-    var password = passwordInput.value.trim();
-    if (password === '123456') {
+    const name = document.getElementById('userName');
+    const  password = passwordInput.value.trim();
+    if (name ==='') {
+        return alert('Please Enter Your Name ')
+    }
+     else if (password === '123456') {
         navButton.classList.remove("hidden")
         heroSection.classList.add("hidden")
         mainSection.classList.remove("hidden")
