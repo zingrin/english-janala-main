@@ -31,20 +31,18 @@
             </div>
             <!-- Buttons -->
             <div class="text-white flex gap-2">
-                <a href="#faq">
-                    <button
+                    <button id="faqSection"
                         class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
                         <img src="./assets/fa-circle-question.png" alt="FAQ Icon" class="w-5 h-5">
                         FAQ
                     </button>
-                </a>
-                <a href="#vacabularies">
+                
                     <button id="vacabularies"
                         class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
                         <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
                         Learn
                     </button>
-                </a>
+           
                 <button id="Logout"
                     class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
                     <img src="./assets/fa-arrow-right-from-bracket.png" alt="" class="w-5 h-5">
@@ -91,13 +89,13 @@
     <main class="hidden" id="main">
 
         <!--learn vacabularies section-->
-        <section id="vacabularies" class="w-11/12 mx-auto text-center space-x-4 space-y-4">
+        <section id="vacabulariescontainer" class="w-11/12 mx-auto text-center space-x-4 space-y-4">
             <h1 class="py-3">
                 <span class="text-[#00BCFF] font-bold text-xl">Let's</span>
                 <span class="text-xl font-bold text-black">Learn Vocabularies</span>
             </h1>
 
-            <section id="levelContainer" class=" w-11/12 mx-auto flex gap-2 justify-around items-center">
+            <section id="levelContainer" class=" w-10/12 mx-auto flex gap-2 justify-around items-center">
 
             </section>
             
@@ -111,7 +109,7 @@
         </div>
 
            <!-- level words -->
-           <section class="grid grid-cols-1 md:grid-cols-3 gap-2 bg-slate-100 mt-4 p-4 rounded-lg mx-auto"
+           <section class=" w-11/12 grid grid-cols-1 md:grid-cols-3 gap-2 bg-slate-100 mt-4 p-4 rounded-lg mx-auto"
            id="wordCards">
            <div class="text-center py-10 col-span-3 space-y-5">
                <p class="text-gray-600  text-sm">আপনি এখনো কোন Lesson Select করেন নি</p>
@@ -125,7 +123,7 @@
 
 
         <!-- question section -->
-        <section id="faq" class=" text-center space-x-4 space-y-4">
+        <section id="accordianSection" class=" text-center space-x-4 space-y-4">
             <h1 class="py-3">
                 <span class="text-[#00BCFF] font-bold text-xl">Frequently</span>
                 <span class="text-xl font-bold text-black">Asked Questions</span>

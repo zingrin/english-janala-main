@@ -6,6 +6,14 @@ const hideLoader = () => {
     document.getElementById('loader').classList.add('hidden')
 }
 
+// navigating buttons 
+document.getElementById('faqSection').addEventListener('click', () => {
+    document.getElementById('accordianSection').scrollIntoView({ behavior: 'smooth', block: 'start' });
+});
+document.getElementById('vacabularies').addEventListener('click', (e) => {
+    document.getElementById('vacabulariescontainer').scrollIntoView({ behavior: 'smooth', block: "start" })
+})
+
 const logoutButton = document.getElementById("Logout");
 
 const learnButton = document.getElementById("vacabularies");
