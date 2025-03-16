@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Janala</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar"
+            class="w-full mx-auto flex justify-between hidden items-center py-5 px-5 border-b-2 border-[#17171720] bg-gray-100">
+            <!-- Logo and Title -->
+            <div class="flex items-center gap-2 ">
+                <h1 class="text-[#18181B] font-bold text-lg">English</h1>
+                <img class="w-[120px] h-11" src="./assets/logo.png" alt="Logo">
+                <h1 class="text-[#000000] font-bold">জানালা</h1>
+            </div>
+
+            <!-- Buttons -->
+            <div class="text-white flex gap-2">
+                <a href="#faq">
+                    <button
+                        class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                        <img src="./assets/fa-circle-question.png" alt="FAQ Icon" class="w-5 h-5">
+                        FAQ
+                    </button>
+                </a>
+                <a href="#vacabularies">
+                    <button id="vacabularies"
+                        class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                        <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
+                        Learn
+                    </button>
+                </a>
+
+
+                <button id="Logout"
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-arrow-right-from-bracket.png" alt="" class="w-5 h-5">
+                    Logout
+                </button>
+            </div>
+
+        </nav>
+    </header>
+
+    <!--hero banner section -->
+    <section id="heroSection"
+        class="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center py-5 px-5 gap-8">
+        <div class="flex flex-col gap-4 md:w-1/2">
+            <h1>
+                <span class="text-[#00BCFF] font-bold text-xl">English</span>
+                <span class=" text-xl font-bold text-black">is Easy!!</span>
+            </h1>
+
+            <p class="text-gray-500">
+                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন <br>
+                অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে<br>
+                যাবে অন্য একটি Level এ
+            </p>
+
+            <div class="flex flex-col gap-4">
+                <input id="userName" type="text" placeholder="Enter Your Name"
+                    class="py-3 px-4 w-fit rounded-lg text-black placeholder-gray-500 text-center border border-gray-300">
+
+                <input id="password" value="123456" type="password" placeholder="Enter Your PIN"
+                    class=" py-3 px-4 w-fit rounded-lg text-black placeholder-gray-500 text-center border border-gray-300">
+
+                <button id="login" class="btn bg-blue-500 text-white rounded-lg hover:bg-blue-700 w-fit px-5 py-2">
+                    Get Started
+                </button>
+            </div>
+        </div>
+
+        <div class="md:w-1/2 flex justify-center">
+            <img src="./assets/hero-student.png" alt="Student Image" class="w-[300px] md:w-[400px]">
+        </div>
+    </section>
+    <main class="hidden" id="main">
+        <!--learn vacabularies section-->
+        <section id="vacabularies" class="w-11/12 mx-auto text-center space-x-4 space-y-4">
+            <h1 class="py-3">
+                <span class="text-[#00BCFF] font-bold text-xl">Let's</span>
+                <span class="text-xl font-bold text-black">Learn Vocabularies</span>
+            </h1>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <button
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
+                    Lesson -1
+                </button>
+                <button
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
+                    Lesson -2
+                </button>
+                <button
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
+                    Lesson -3
+                </button>
+                <button
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
+                    Lesson -4
+                </button>
+                <button
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
+                    Lesson -5
+                </button>
+                <button
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
+                    Lesson -6
+                </button>
+                <button
+                    class="btn text-blue-800 border border-blue-500 flex items-center gap-2 px-4 py-2 bg-transparent hover:bg-blue-700">
+                    <img src="./assets/fa-book-open.png" alt="" class="w-5 h-5">
+                    Lesson -7
+                </button>
+            </div>
+            <div class="bg-gray-100 w-11/12 mx-auto text-center p-4 rounded-lg mb-8">
+                <h2 class="text-sm text-gray-500">আপনি এখনো কোন Lesson Select করেন নি।</h2>
+                <h1 class="font-bold text-[#292524] text-xl">একটি Lesson Select করুন।</h1>
+            </div>
+
+        </section>
+        <!-- question section -->
+        <section id="faq" class="w-11/12 mx-auto text-center space-x-4 space-y-4">
+            <h1 class="py-3">
+                <span class="text-[#00BCFF] font-bold text-xl">Frequently</span>
+                <span class="text-xl font-bold text-black">Asked Questions</span>
+            </h1>
+
+            <div class="bg-gray-100 w-11/12 mx-auto text-center p-4 rounded-lg mb-8">
+                <h1>How can I start learning English on this website?</h1>
+            </div>
+
+
+        </section>
+
+    </main>
+    <footer class="border-t-2 border-red-100 py-6 px-12">
+        <div class="flex justify-between items-center">
+            <!-- Logo + Title -->
+            <div class="flex flex-col items-center gap-1">
+                <div class="flex items-center gap-2">
+                    <h1 class="text-[#18181B] font-bold text-lg">English</h1>
+                    <img class="w-[100px] h-9" src="./assets/logo.png" alt="Logo">
+                    <h1 class="text-[#000000] font-bold">জানালা</h1>
+                </div>
+
+                <div class="text-center">
+                    <h1 class="text-[#000000] font-bold text-base">ইংরেজি শিখুন সহজে</h1>
+                    <p class="text-[#555] text-sm">Providing ED-Tech Applications since 2025</p>
+                </div>
+            </div>
+
+            <!-- Follow Us -->
+            <div class="flex flex-col items-center gap-2">
+                <h2 class="text-gray-500 font-bold text-base">Follow Us</h2>
+
+                <div class="flex gap-3">
+                    <img src="./assets/fb-thumb.png" alt="" class="w-5 h-5">
+                    <img src="./assets/instagram-thumb.png" alt="" class="w-5 h-5">
+                    <img src="./assets/youtube-thumb.png" alt="" class="w-5 h-5">
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./script/index.js"></script>
+</body>
+
+</html>
