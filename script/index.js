@@ -34,7 +34,12 @@ logoutButton.onclick = () => {
     heroSection.classList.remove("hidden");
     mainSection.classList.add("hidden");
 };
-
+// uccaron
+const pronounceWord = (word) => {
+    const utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-EN';
+    window.speechSynthesis.speak(utterance);
+}
 // Fetch and Display Words
 const displaywordCard = async (id) => {
     try {
@@ -51,7 +56,7 @@ const displaywordCard = async (id) => {
                     <p class="bangla font-bold text-2xl">"${word.meaning || 'অর্থ নেই'}/${word.pronunciation || ''}"</p>
                     <div class="absolute bottom-3 left-0 w-full flex justify-between items-center px-4">
                         <i onclick="wordDetails(${word.id})" class="fa-solid fa-circle-info bg-slate-100 p-2 cursor-pointer rounded-sm"></i>
-                        <i class="fa-solid fa-volume-high bg-slate-100 p-2 cursor-pointer rounded-sm"></i>
+                        <i onclick="pronounceWord('${word.word}')" class="fa-solid fa-volume-high bg-slate-100 p-2 cursor-pointer rounded-sm"></i>
                     </div>
                 </div>
             `).join('') :
@@ -106,11 +111,11 @@ const wordDetails = async (id) => {
             <p class="font-bold">Meaning</p>
             <p class="font-bold text-sm">${details.meaning || 'অর্থ নেই'}</p>
             <p class="font-bold text-xl">Example</p>
-            <p class="text-gray-700">${details.sentence || 'No example available'}</p>
+            <p onclick="pronounceWord('${details.sentence}')" class="text-gray-700">${details.sentence || 'No example available'}</p>
             <p class="font-bold text-xl">সমার্থক শব্দ গুলোঃ</p>
             <div class="flex items-center flex-wrap gap-3">
                 ${(details.synonyms || []).map(word => 
-                    `<p class="cursor-pointer bg-slate-100 p-2 rounded-sm">${word}</p>`
+                    `<p onclick="pronounceWord('${word}')" class="cursor-pointer bg-slate-100 p-2 rounded-sm">${word}</p>`
                 ).join('')}
             </div>
         `;
