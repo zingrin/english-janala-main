@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,8 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        html{
+        html {
             scroll-behavior: smooth;
         }
     </style>
@@ -21,14 +21,14 @@
         <nav id="navbar"
             class="w-full mx-auto flex justify-between hidden items-center py-5 px-5 border-b-2 border-[#17171720] bg-gray-100">
             <!-- Logo and Title -->
-           <div>
-            <div class="flex items-center gap-2 ">
-                <h1 class="text-[#18181B] font-bold text-lg">English</h1>
-                <img class="" src="./assets/logo.png"  alt="Logo">
-                <h1 class="text-[#000000] font-bold">জানালা</h1>
-            </div>
+            <div>
+                <div class="flex items-center gap-2 ">
+                    <h1 class="text-[#18181B] font-bold text-lg">English</h1>
+                    <img class="" src="./assets/logo.png" alt="Logo">
+                    <h1 class="text-[#000000] font-bold">জানালা</h1>
+                </div>
 
-           </div>
+            </div>
             <!-- Buttons -->
             <div class="text-white flex gap-2">
                 <a href="#faq">
@@ -57,37 +57,37 @@
 
     <!--hero banner section -->
     <section id="heroSection"
-    class="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center py-5 px-5 gap-8">
-    <div class="flex flex-col gap-4 md:w-1/2">
-        <h1>
-            <span class="text-[#00BCFF] font-bold text-xl">English</span>
-            <span class=" text-xl font-bold text-black">is Easy!!</span>
-        </h1>
-   
-        <p class="text-gray-500">
-            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন <br>
-            অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে<br>
-            যাবে অন্য একটি Level এ
-        </p>
-   
-        <div class="flex flex-col gap-4">
-            <input id="userName" type="text" placeholder="Enter Your Name"
-                class="py-3 px-4 w-fit rounded-lg text-black placeholder-gray-500 text-center border border-gray-300">
-   
-            <input id="password" value="123456" type="password" placeholder="Enter Your PIN"
-                class=" py-3 px-4 w-fit rounded-lg text-black placeholder-gray-500 text-center border border-gray-300">
-   
-            <button id="login" class="btn bg-blue-500 text-white rounded-lg hover:bg-blue-700 w-fit px-5 py-2">
-                Get Started
-            </button>
+        class="w-11/12 mx-auto flex flex-col md:flex-row justify-between items-center py-5 px-5 gap-8">
+        <div class="flex flex-col gap-4 md:w-1/2">
+            <h1>
+                <span class="text-[#00BCFF] font-bold text-xl">English</span>
+                <span class=" text-xl font-bold text-black">is Easy!!</span>
+            </h1>
+
+            <p class="text-gray-500">
+                আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন <br>
+                অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে<br>
+                যাবে অন্য একটি Level এ
+            </p>
+
+            <div class="flex flex-col gap-4">
+                <input id="userName" type="text" placeholder="Enter Your Name"
+                    class="py-3 px-4 w-fit rounded-lg text-black placeholder-gray-500 text-center border border-gray-300">
+
+                <input id="password" value="123456" type="password" placeholder="Enter Your PIN"
+                    class=" py-3 px-4 w-fit rounded-lg text-black placeholder-gray-500 text-center border border-gray-300">
+
+                <button id="login" class="btn bg-blue-500 text-white rounded-lg hover:bg-blue-700 w-fit px-5 py-2">
+                    Get Started
+                </button>
+            </div>
         </div>
-    </div>
-   
-    <div class="md:w-1/2 flex justify-center">
-        <img src="./assets/hero-student.png" alt="Student Image" class="w-[300px] md:w-[400px]">
-    </div>
-   </section>
-   
+
+        <div class="md:w-1/2 flex justify-center">
+            <img src="./assets/hero-student.png" alt="Student Image" class="w-[300px] md:w-[400px]">
+        </div>
+    </section>
+
     <main class="hidden" id="main">
 
         <!--learn vacabularies section-->
@@ -97,19 +97,33 @@
                 <span class="text-xl font-bold text-black">Learn Vocabularies</span>
             </h1>
 
-           <section id="levelContainer" class="flex gap-2 justify-around items-center">
-
-           </section>
-            <div class="bg-gray-100 w-11/12 mx-auto text-center p-4 rounded-lg mb-8">
-                <h2 class="text-sm text-gray-500">আপনি এখনো কোন Lesson Select করেন নি।</h2>
-                <h1 class="font-bold text-[#292524] text-xl">একটি Lesson Select করুন।</h1>
-            </div>
-
-            <!-- load word -->
-            <section>
+            <section id="levelContainer" class="flex gap-2 justify-around items-center">
 
             </section>
+            
+          <!-- loader-->
+          <div id="loader" class="hidden text-center w-full mx-auto relative top-20 z-40">
+            <span class="loading loading-ball text-orange-500 loading-xs"></span>
+            <span class="loading loading-ball text-red-600 loading-sm"></span>
+            <span class="loading loading-ball text-blue-900 loading-md"></span>
+            <span class="loading loading-ball text-yellow-900 loading-lg"></span>
+            <span class="loading loading-ball loading-xl"></span>
+        </div>
+
+           <!-- level words -->
+           <section class="grid grid-cols-1 md:grid-cols-3 gap-2 bg-slate-100 mt-4 p-4 rounded-lg mx-auto"
+           id="wordCards">
+           <div class="text-center py-10 col-span-3 space-y-5">
+               <p class="text-gray-600  text-sm">আপনি এখনো কোন Lesson Select করেন নি</p>
+               <h1 class="font-bold text-xl">একটি Lesson Select করুন।</h1>
+           </div>
+
+           <!--  show dynamic word card -->
+       </section>
+
         </section>
+
+
         <!-- question section -->
         <section id="faq" class=" text-center space-x-4 space-y-4">
             <h1 class="py-3">
@@ -118,23 +132,26 @@
             </h1>
 
             <!-- acordiano -->
-           <section>
-            <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title font-semibold">How do I create an account?</div>
-                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
-              </div>
-              <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
-                <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
-              </div>
-              <div class="collapse collapse-plus bg-base-100 border border-base-300">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title font-semibold">How do I update my profile information?</div>
-                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
-              </div>
-           </section>
+            <section>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" checked="checked" />
+                    <div class="collapse-title font-semibold">How do I create an account?</div>
+                    <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow
+                        the registration process.</div>
+                </div>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+                    <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the
+                        instructions sent to your email.</div>
+                </div>
+                <div class="collapse collapse-plus bg-base-100 border border-base-300">
+                    <input type="radio" name="my-accordion-3" />
+                    <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                    <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make
+                        changes.</div>
+                </div>
+            </section>
 
         </section>
 
